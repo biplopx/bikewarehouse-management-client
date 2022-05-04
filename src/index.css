@@ -25,6 +25,10 @@ h6 {
   color: var(--primary-color);
 }
 
+a {
+  text-decoration: none;
+}
+
 /* Custom Button */
 
 .bike-btn {

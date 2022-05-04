@@ -1,9 +1,17 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import auth from '../../firebase';
 import './Header.css';
 
 const Header = () => {
+  const [user] = useAuthState(auth);
+  // Handle Logout
+  const logOut = () => {
+    signOut(auth);
+  }
   return (
     <header>
       <Navbar collapseOnSelect expand="lg" variant="dark">
@@ -12,7 +20,7 @@ const Header = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mx-auto">
-              <Nav.Link href="#features">Inventory</Nav.Link>
+              <Nav.Link as={Link} to="/manage-inventories">Manage Inventories</Nav.Link>
               <Nav.Link href="#pricing">Pricing</Nav.Link>
               <Nav.Link as={Link} to="/blogs">Blogs</Nav.Link>
               <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
@@ -24,10 +32,22 @@ const Header = () => {
               </NavDropdown>
             </Nav>
             <Nav>
-              <Nav.Link as={Link} to="/login">Login</Nav.Link>
-              <Nav.Link as={Link} to="/register">
-                Register
-              </Nav.Link>
+              {
+                user ?
+                  <>
+                    <Nav.Link as={Link} to="/login">Add Items</Nav.Link>
+                    <Nav.Link as={Link} to="/register">Manage Items</Nav.Link>
+                    <button onClick={logOut} className='btn bike-btn text-white rounded-pill'>Logout</button>
+                  </>
+                  :
+                  <>
+                    <Nav.Link as={Link} to="/login">Login</Nav.Link>
+                    <Nav.Link as={Link} to="/register">
+                      Register
+                    </Nav.Link>
+                  </>
+              }
+
             </Nav>
           </Navbar.Collapse>
         </Container>

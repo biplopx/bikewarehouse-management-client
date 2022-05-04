@@ -5,6 +5,8 @@ import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import Blogs from './components/Blogs/Blogs';
 import Footer from './components/Footer/Footer';
+import ManageInventories from './components/ManageInventories/ManageInventories';
+import RequireAuth from './components/RequireAuth/RequireAuth';
 
 function App() {
   return (
@@ -16,6 +18,11 @@ function App() {
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
+        <Route path="/manage-inventories" element={
+          <RequireAuth>
+            <ManageInventories></ManageInventories>
+          </RequireAuth>
+        }></Route>
       </Routes>
       <Footer></Footer>
     </>
