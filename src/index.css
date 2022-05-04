@@ -3,6 +3,8 @@
 
 :root {
   --primary-color: #3B3B98;
+  --btn-color: #6262ad;
+  --btn-hover: #4f4fa2;
 }
 
 body {
@@ -23,7 +25,20 @@ h6 {
   color: var(--primary-color);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Custom Button */
+
+.bike-btn {
+  background-color: var(--btn-color);
+  color: #fff;
+}
+
+.bike-btn:hover {
+  background-color: var(--btn-hover);
+  color: #fff;
+}
+
+/* Custom Background Color */
+
+.brand-color {
+  background: var(--primary-color);
 }
