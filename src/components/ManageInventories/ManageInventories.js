@@ -5,7 +5,6 @@ import auth from '../../firebase';
 
 const ManageInventories = () => {
   const [user] = useAuthState(auth);
-  const { state } = useLocation();
   return (
     <div>
       <h2>Manage Inventories Products</h2>

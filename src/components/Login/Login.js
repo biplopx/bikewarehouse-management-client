@@ -24,6 +24,7 @@ const Login = () => {
   ] = useSignInWithEmailAndPassword(auth);
   const [sendPasswordResetEmail, resetError] = useSendPasswordResetEmail(auth);
 
+
   // Get Input Values
   const handleEmailInput = event => {
     setEmail(event.target.value);
@@ -42,8 +43,6 @@ const Login = () => {
   if (loading) {
     return <Loading></Loading>;
   }
-
-
 
   // user signup error handle
   if (error || resetError) {

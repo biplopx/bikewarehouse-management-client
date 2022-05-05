@@ -20,6 +20,7 @@ const Register = () => {
     error,
   ] = useCreateUserWithEmailAndPassword(auth);
 
+
   // update
   const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
@@ -55,8 +56,6 @@ const Register = () => {
   if (updateError) {
     displayError = <div className="alert alert-danger my-3" role="alert">Error: {error?.message}</div>;
   }
-
-  // if user exits
 
 
 
