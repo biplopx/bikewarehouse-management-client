@@ -59,7 +59,7 @@ const Login = () => {
   // Reset Password
   const resetPassword = async () => {
     if (email) {
-      sendPasswordResetEmail(email);
+      await sendPasswordResetEmail(email);
       toast('Password reset email send');
     }
     else {
@@ -93,11 +93,11 @@ const Login = () => {
                     <form onSubmit={handleLogin}>
                       <div className="mb-3">
                         <label htmlFor="email" className="form-label">Email address</label>
-                        <input onBlur={handleEmailInput} type="email" className="form-control" id="email" name='email' />
+                        <input onBlur={handleEmailInput} type="email" className="form-control" id="email" name='email' required />
                       </div>
                       <div className="mb-3">
                         <label htmlFor="password" className="form-label">Password</label>
-                        <input onBlur={handlePasswordInput} type="password" className="form-control" id="password" name='password' />
+                        <input onBlur={handlePasswordInput} type="password" className="form-control" id="password" name='password' required />
                       </div>
                       <button type="submit" className="btn w-100 bike-btn mb-4">Login</button>
                     </form>
