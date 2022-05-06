@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import auth from '../../firebase';
 import Loading from '../Loading/Loading';
+import PageTitle from '../PageTitle/PageTitle';
 import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Register = () => {
@@ -18,7 +20,7 @@ const Register = () => {
     user,
     loading,
     error,
-  ] = useCreateUserWithEmailAndPassword(auth);
+  ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
 
   // update
@@ -27,7 +29,6 @@ const Register = () => {
 
   useEffect(() => {
     if (user) {
-      alert('Registration Successful');
       navigate('/')
     }
   }, [user, navigate])
@@ -64,10 +65,12 @@ const Register = () => {
     event.preventDefault();
     await createUserWithEmailAndPassword(email, password);
     await updateProfile({ displayName: name });
+    toast('Registration Successful');
   }
 
   return (
     <section className='py-3'>
+      <PageTitle title="Register"></PageTitle>
       <div className="container">
         {
           user ?

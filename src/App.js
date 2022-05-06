@@ -7,6 +7,8 @@ import Blogs from './components/Blogs/Blogs';
 import Footer from './components/Footer/Footer';
 import ManageInventories from './components/ManageInventories/ManageInventories';
 import RequireAuth from './components/RequireAuth/RequireAuth';
+import AddItems from './components/AddItems/AddItems';
+import MyItems from './components/MyItems/MyItems';
 
 function App() {
   return (
@@ -23,6 +25,17 @@ function App() {
             <ManageInventories></ManageInventories>
           </RequireAuth>
         }></Route>
+        <Route path="/add-items" element={
+          <RequireAuth>
+            <AddItems></AddItems>
+          </RequireAuth>
+        }></Route>
+        <Route path="/my-items" element={
+          <RequireAuth>
+            <MyItems></MyItems>
+          </RequireAuth>
+        }></Route>
+
       </Routes>
       <Footer></Footer>
     </>

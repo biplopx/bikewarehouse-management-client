@@ -6,6 +6,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../firebase';
 import Loading from '../Loading/Loading';
+import PageTitle from '../PageTitle/PageTitle';
 import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Login = () => {
@@ -69,6 +70,7 @@ const Login = () => {
 
   return (
     <section className='py-3'>
+      <PageTitle title="Login"></PageTitle>
       <div className="container">
         {
           user ?

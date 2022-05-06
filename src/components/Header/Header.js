@@ -1,6 +1,6 @@
 import { signOut } from 'firebase/auth';
 import React from 'react';
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../firebase';
@@ -19,25 +19,19 @@ const Header = () => {
           <Navbar.Brand as={Link} to="/">BikeWarehouse</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="mx-auto">
-              <Nav.Link as={Link} to="/manage-inventories">Manage Inventories</Nav.Link>
-              <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <Nav className="ms-auto">
+              <Nav.Link as={Link} to="/home">Home</Nav.Link>
               <Nav.Link as={Link} to="/blogs">Blogs</Nav.Link>
-              <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-              </NavDropdown>
             </Nav>
             <Nav>
               {
                 user ?
                   <>
-                    <Nav.Link as={Link} to="/login">Add Items</Nav.Link>
-                    <Nav.Link as={Link} to="/register">Manage Items</Nav.Link>
-                    <button onClick={logOut} className='btn bike-btn text-white rounded-pill'>Logout</button>
+                    <Nav.Link as={Link} to="/manage-inventories">Manage Inventories</Nav.Link>
+                    <Nav.Link as={Link} to="/add-items">Add Items</Nav.Link>
+                    <Nav.Link as={Link} to="/my-items">My Items</Nav.Link>
+                    <Navbar.Text><span className='text-white'>({user?.displayName}) </span></Navbar.Text>
+                    <button onClick={logOut} className='btn bike-btn text-white rounded-pill mx-1'>Logout</button>
                   </>
                   :
                   <>
