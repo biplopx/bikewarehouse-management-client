@@ -1,0 +1,56 @@
+[
+  {
+    "name": "New Honda CBR150R(ABS)",
+    "image": "https://www.banglamotor.net/images/honda/honda-cbr150r-f02.jpg",
+    "description": "The CBR150R is one of the stylish latest super bikes of Honda. Including its outstanding features like - sporty look and wonderful color combination along with liquid-cooled powerful engine which included a program fuel injection. In comparison, its price is higher in Bangladescriptionh, but its demand for fashion-based Bangladescriptionhis is above all. The CBR sports bikes are a big part of the motor sports world. Yamaha R15 v3, Suzuki GSX R150 are the strong competitors of this super dashing bike.",
+    "price": 525000,
+    "quantity": 1,
+    "suppplier": "Honda",
+    "email": "developerbiplop@gmail.com"
+  },
+  {
+    "name": "Yamaha FZS Fi",
+    "image": "https://www.banglamotor.net/images/yamaha/yamaha-fzs-fi-v2-img1.jpg",
+    "description": "The Yamaha FZS FI v2 is slightly lighter than its previous version. Already the bike has become very popular in Bangladescriptionh. Yamaha has been successful in their FZ series over the past few years. In the continuation of the FZ series new bike Yamaha FZS FI v2. The bike is fuel efficient compared to the previous version. the newer version has increased fuel-efficiency. Some of the advantages of this bike in recent times have been different from its competitors such as wide tires, thick telescopic forks, little low seats, complete digital instrument console.",
+    "price": 208000,
+    "quantity": 1,
+    "suppplier": "Yamaha",
+    "email": "developerbiplop@gmail.com"
+  },
+  {
+    "name": "Suzuki Bandit 150",
+    "image": "https://www.banglamotor.net/images/suzuki/suzuki-bandit-150-img1.jpg",
+    "description": "The Suzuki Bandit is a series of standard motorcycles produced by Suzuki that began its journey in 1989. Bandit 150 is the youngest member in the series. However, the Bandit series mainly deals with standard motorcycles. In this case, the Bandit 150 looks a lot like a sports bike. Suzuki first showed this bike at the Indonesia International Auto Show in 2018, and it was made at Suzuki's Indonesia factory.",
+    "price": 1,
+    "quantity": 319950,
+    "suppplier": "Suzuki",
+    "email": "developerbiplop@gmail.com"
+  },
+  {
+    "name": "Bajaj Pulsar NS 160 ABS",
+    "image": "https://www.banglamotor.net/images/bajaj/bajaj-ns160abs-img01.jpg",
+    "description": "Bajaj Pulsar Series has been such a successful fleet over the last few years in the Bangladescriptionh and Indian market. As a continuation Bajaj launched “Pulsar NS160” in the Bangladescriptionh market. The pulsar NS 60 is a full naked sports bike. In this category bikes demand is very limited here in the local market. However the model NS160 initially has got good response from the market. Let’s see the key features of this naked sports bike “Bajaj Pulsar NS160”.",
+    "price": 254900,
+    "quantity": 1,
+    "suppplier": "Bajaj",
+    "email": "developerbiplop@gmail.com"
+  },
+  {
+    "name": "Hero Hunk",
+    "image": "https://www.banglamotor.net/images/hero/new-hero-hunk-img001.jpg",
+    "description": "Hero Hunk has passed a successful era. In the year 2007 Hero and Honda jointly launched the Hunk. After the separation of Hero and Honda in 2011, Hero has been upgraded Hunk again at the same year. This includescription significant changes in Digital Meter Console, Altered Visor, Body-colored Mirrors and LED Tail-lamp etc. This is the most admired and comfortable bike in India and Bangladescriptionh market. The well-known hero Hunk started its journey in the Bangladescriptionhi market newly at the end of 2021, and this new Hunk has undergone several changes.",
+    "price": 178490,
+    "quantity": 1,
+    "suppplier": "Hero",
+    "email": "developerbiplop@gmail.com"
+  },
+  {
+    "name": "TVS Apache RTR 160",
+    "image": "https://www.banglamotor.net/images/tvs/tvs-apache-rtr-img1.jpg",
+    "description": "The Apache RTR 160 is the heartthrob bike for the young Bangladescriptionhi fashionable bikers. It’s been a long time Apache RTR is playing in Bangladescriptionh. Still young fashionable bikers are dreaming of this bike, though a new model already came in the Apache RTR series. However let’s see the main reason of attraction to this bike.",
+    "price": 169900,
+    "quantity": 1,
+    "suppplier": "TVS",
+    "email": "developerbiplop@gmail.com"
+  }
+]
