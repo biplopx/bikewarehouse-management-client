@@ -3,8 +3,7 @@ import useProducts from '../../hooks/useProducts';
 import SingleProduct from '../SingleProduct/SingleProduct';
 
 const WarehouseProducts = () => {
-  const [products, setProducts] = useProducts();
-
+  const [products] = useProducts();
   return (
     <section className='py-4'>
       <div className="container">
