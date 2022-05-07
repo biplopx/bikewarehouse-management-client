@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../firebase';
 import Loading from '../Loading/Loading';
+import PageTitle from '../PageTitle/PageTitle';
 
 const AddItems = () => {
   const [user, loading] = useAuthState(auth);
@@ -27,10 +30,10 @@ const AddItems = () => {
     setDescription(event.target.value)
   }
   const handlePrice = event => {
-    setPrice(event.target.value)
+    setPrice(parseInt(event.target.value))
   }
   const handleQuantity = event => {
-    setQuantity(event.target.value)
+    setQuantity(parseInt(event.target.value))
   }
   const handleEmail = event => {
     setEmail(event.target.value)
@@ -47,7 +50,6 @@ const AddItems = () => {
     email: email,
     supplier: supplier,
   }
-  console.log(data)
   // Product submit
   const handleAddProduct = event => {
     event.preventDefault();
@@ -62,11 +64,14 @@ const AddItems = () => {
       .then(res => res.json())
       .then(result => {
         console.log(result)
+        toast('Prdouct Added')
+        event.target.reset()
       })
   }
 
   return (
     <section style={{ background: '#D2E4FF' }} className='py-5'>
+      <PageTitle title="Add New Product"></PageTitle>
       <div className="container">
         <div className="row">
           <div className="col mx-auto col-lg-8">
@@ -108,10 +113,10 @@ const AddItems = () => {
                 </form>
               </div>
             </div>
-
           </div>
         </div>
       </div>
+      <ToastContainer></ToastContainer>
     </section>
   );
 };

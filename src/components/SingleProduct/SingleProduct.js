@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const SingleProduct = ({ product }) => {
-  const { _id, name, image, description, price, quantity, suppplier } = product;
+  const { _id, name, image, description, price, quantity, supplier } = product;
   const navigate = useNavigate();
   const navigateToProductDetail = id => {
     navigate(`/inventory/${id}`)
@@ -19,7 +19,7 @@ const SingleProduct = ({ product }) => {
             <p className="card-text text-justify">{`${description.slice(0, 278)}`} <span className='text-primary' title={description}>More...</span></p>
             <p className="card-text"> <strong>Price:</strong> {price} TK</p>
             <p className="card-text"> <strong>Quantity:</strong> {quantity}</p>
-            <p className="card-text"> <strong>Supplier:</strong> {suppplier}</p>
+            <p className="card-text"> <strong>Supplier:</strong> {supplier}</p>
 
           </div>
           <div className="card-footer bg-white">
