@@ -52,13 +52,23 @@ const ProductDetail = () => {
                     </tr>
                   </tbody>
                 </table>
+                <div className='border p-2'>
+                  <h3 className='text-center'>Manage</h3>
+                  <div className='d-flex justify-content-center mb-4'>
+                    <button className="btn bike-btn me-2">Delivered</button>
+                    <button className="btn btn-success">Sold: No</button>
+                  </div>
+                  <div className='d-flex justify-content-center flex-wrap'>
+                    <input type="number" className="form-control shadow-none w-75 me-4" id="quantity" name='quantity' />
+                    <button className="btn bike-btn">Add Quantity</button>
+                  </div>
+                </div>
               </div>
             </div>
 
           </div>
         </div>
       </div>
-
     </section>
   );
 };
