@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Modal } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useProducts from '../../hooks/useProducts';
 import PageTitle from '../PageTitle/PageTitle';
@@ -17,8 +16,6 @@ const ManageInventories = () => {
 
   return (
     <>
-
-
       <section className='py-4'>
         <PageTitle title="Manage Inventories"></PageTitle>
         <div className="container">

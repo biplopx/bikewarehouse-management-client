@@ -30,7 +30,7 @@ const SingleProduct = ({ product, refreshProduct }) => {
   const handleDelete = () => {
     // const proceed = window.confirm('are you sure?');
     setShow(false)
-    const url = `http://localhost:5000/inventory/${_id}`;
+    const url = `https://bikewarehouse-heroku.herokuapp.com/inventory/${_id}`;
     fetch(url, {
       method: 'DELETE'
     })

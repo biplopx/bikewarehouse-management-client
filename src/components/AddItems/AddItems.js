@@ -49,7 +49,7 @@ const AddItems = () => {
   // Product submit
   const handleAddProduct = event => {
     event.preventDefault();
-    const url = `http://localhost:5000/products`
+    const url = `https://bikewarehouse-heroku.herokuapp.com/products`
     fetch(url, {
       method: 'POST',
       headers: {

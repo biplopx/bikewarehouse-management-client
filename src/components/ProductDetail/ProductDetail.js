@@ -5,23 +5,22 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const ProductDetail = () => {
   const { productId } = useParams();
-  // const [product, setProduct] = useProductDetail(productId);
   const [detailProduct, setDetailProduct] = useState([]);
 
   //Input Value 
   const [quantity, setQuantity] = useState(0);
 
+  // Fetch Product Details
   const fetchProductDetail = () => {
-    const url = `http://localhost:5000/inventory/${productId}`;
+    const url = `https://bikewarehouse-heroku.herokuapp.com/inventory/${productId}`;
     fetch(url)
       .then(res => res.json())
       .then(data => setDetailProduct(data))
   }
 
-
+  // Update Quantity
   const updateQuantity = () => {
-
-    const url = `http://localhost:5000/inventory/quantityupdate/${productId}`
+    const url = `https://bikewarehouse-heroku.herokuapp.com/inventory/quantityupdate/${productId}`
     fetch(url, {
       method: 'PUT',
       headers: {
@@ -35,9 +34,9 @@ const ProductDetail = () => {
         toast('Quantity Updated')
       })
   }
-
+  // Delivered Update
   const deliveredProduct = () => {
-    const url = `http://localhost:5000/inventory/delivered/${productId}`
+    const url = `https://bikewarehouse-heroku.herokuapp.com/inventory/delivered/${productId}`
     fetch(url, {
       method: 'PUT',
       headers: {
@@ -53,7 +52,7 @@ const ProductDetail = () => {
 
   // Refresh Product Details
   useEffect(() => {
-    const url = `http://localhost:5000/inventory/${productId}`;
+    const url = `https://bikewarehouse-heroku.herokuapp.com/inventory/${productId}`;
     fetch(url)
       .then(res => res.json())
       .then(data => setDetailProduct(data))

@@ -18,7 +18,7 @@ const MyItems = () => {
   // }, [myItems])
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myitems/${user.email}`)
+    fetch(`https://bikewarehouse-heroku.herokuapp.com/myitems/${user.email}`)
       .then(res => res.json())
       .then(data => setMyItems(data));
   }, [user.email]);
