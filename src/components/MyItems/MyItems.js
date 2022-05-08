@@ -11,11 +11,6 @@ const MyItems = () => {
     <loading></loading>
   }
   const [myItems, setMyItems] = useState([]);
-  // const [stateProducts, setSateProducts] = useState(myItems);
-  // // refresh ui
-  // useEffect(() => {
-  //   setSateProducts(myItems)
-  // }, [myItems])
 
   useEffect(() => {
     fetch(`https://bikewarehouse-heroku.herokuapp.com/myitems/${user.email}`)

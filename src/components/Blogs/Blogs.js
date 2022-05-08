@@ -34,10 +34,10 @@ const Blogs = () => {
               <p>
                 <strong>Ans:</strong> SQL Database: SQL stands for Structured Query Language. SQL database is relational database where you can store data in table based. SQL database have fixed or static or predefined schema.In this database we can run complex queries. SQLDatabase Examples: MySQL, MariaDB, PostgreSQL. NoSQL Database: NoSQL stand for non SQL or not only SQL. In no sql database you can store data like json file as document. No sql database have dynamic schema. In NoSQL database we can store data in key value pair. NoSQL Database Examples: MongoDB, CouchDB etc</p>
             </div>
-            <div className='border p-3 rounded'>
+            <div className='border p-3 rounded mt-3'>
               <h3 className='mb-3'>4. What is the purpose of jwt and how does it work?</h3>
               <p>
-                <strong>Ans:</strong> JWT stands for JSON Web Token. JWT is technique to verify user access to an web application.-</p>
+                <strong>Ans:</strong> JWT stands for JSON Web Token. JWT is technique to verify user access to an web application. after user login its send and access code then server side verify the token id and give access to the user.</p>
             </div>
           </div>
         </div>
