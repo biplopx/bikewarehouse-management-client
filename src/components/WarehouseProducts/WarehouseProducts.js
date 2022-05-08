@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import useProducts from '../../hooks/useProducts';
 // import { Link } from 'react-router-dom';
@@ -6,6 +7,7 @@ import SingleProduct from '../SingleProduct/SingleProduct';
 const WarehouseProducts = () => {
   const [products] = useProducts();
   const sixProducts = products.slice(0, 6);
+  const [isLoading, setLoading] = useState(true);
   return (
     <section className='py-4'>
       <div className="container text-center">
