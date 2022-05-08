@@ -19,15 +19,15 @@ const Blogs = () => {
               <h3 className='mb-3'>2. When should you use nodejs and when should you use mongodb?</h3>
               <p>
                 <strong>Ans:</strong> The technology we use to build a web application first depends on the project and then everything else. Generally node.js is good for applications that require a persistent connection from the client to the server. Using Node.js can be a great way to build real-time web applications where data will be exchanged quickly through the network. Mongodb is greate database to make web application. Monogo is greate choice if the application have services that you many user and who interact like blogs website. MongoDB is a general-purpose database used in various ways to support web applications in many different industries examples telecommunications, gaming, blog, finances, healthcare, and retail.
-                <h5>MongoDB use cases</h5>
-                <ul>
-                  <li>Integrating large amounts of diverse data</li>
-                  <li>Describing complex data structures that evolve</li>
-                  <li>Delivering data in high-performance applications</li>
-                  <li>Supporting hybrid and multi-cloud applications</li>
-                  <li>Supporting agile development and collaboration</li>
-                </ul>
               </p>
+              <h5>MongoDB use cases</h5>
+              <ul>
+                <li>Integrating large amounts of diverse data</li>
+                <li>Describing complex data structures that evolve</li>
+                <li>Delivering data in high-performance applications</li>
+                <li>Supporting hybrid and multi-cloud applications</li>
+                <li>Supporting agile development and collaboration</li>
+              </ul>
             </div>
             <div className='border p-3 rounded'>
               <h3 className='mb-3'>3. Differences between sql and nosql databases?</h3>
