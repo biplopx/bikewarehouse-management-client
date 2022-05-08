@@ -13,7 +13,6 @@ const AddItems = () => {
   const [description, setDescription] = useState();
   const [price, setPrice] = useState();
   const [quantitiy, setQuantity] = useState();
-  const [email, setEmail] = useState();
   const [supplier, setSupplier] = useState();
   if (loading) {
     <Loading></Loading>
@@ -35,9 +34,6 @@ const AddItems = () => {
   const handleQuantity = event => {
     setQuantity(parseInt(event.target.value))
   }
-  const handleEmail = event => {
-    setEmail(event.target.value)
-  }
   const handleSupplier = event => {
     setSupplier(event.target.value)
   }
@@ -47,7 +43,7 @@ const AddItems = () => {
     description: description,
     price: price,
     quantity: quantitiy,
-    email: email,
+    email: user.email,
     supplier: supplier,
   }
   // Product submit
@@ -63,9 +59,9 @@ const AddItems = () => {
     })
       .then(res => res.json())
       .then(result => {
-        console.log(result)
         toast('Prdouct Added')
         event.target.reset()
+
       })
   }
 
@@ -103,7 +99,7 @@ const AddItems = () => {
                   </div>
                   <div className="mb-3">
                     <label htmlFor="email" className="form-label fw-bold">Email</label>
-                    <input type="email" onBlur={handleEmail} value={user.email} className="form-control shadow-none" id="email" name='email' required readOnly />
+                    <input type="email" value={user.email} className="form-control shadow-none" id="email" name='email' required readOnly />
                   </div>
                   <div className="mb-3">
                     <label htmlFor="supplier" className="form-label fw-bold">Supplier</label>
