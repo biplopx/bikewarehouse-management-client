@@ -8,7 +8,6 @@ const ManageInventories = () => {
   const [products] = useProducts();
   const [stateProducts, setSateProducts] = useState(products);
 
-
   //Refesh Product after Delte
   useEffect(() => {
     setSateProducts(products)
