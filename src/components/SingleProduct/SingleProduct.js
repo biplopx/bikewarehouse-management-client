@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import useProducts from '../../hooks/useProducts';
+import auth from '../../firebase';
 
 const SingleProduct = ({ product, refreshProduct }) => {
+  const [user] = useAuthState(auth);
+
   const { _id, name, image, description, price, quantity, supplier } = product;
   const navigate = useNavigate();
   const [products] = useProducts();
@@ -72,7 +76,10 @@ const SingleProduct = ({ product, refreshProduct }) => {
           </div>
           <div className="card-footer d-flex justify-content-between bg-white">
             <button onClick={() => navigateToProductDetail(_id)} className="btn bike-btn">Manage Product</button>
-            <button onClick={() => setShow(true)} className="btn bike-btn">Delete</button>
+            {
+              user ? <button onClick={() => setShow(true)} className="btn bike-btn">Delete</button> : null
+            }
+
           </div>
         </div>
       </div>
